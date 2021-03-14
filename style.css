@@ -1,0 +1,61 @@
+body {
+    background-image: url("https://i.imgur.com/SGfFRBB.png");
+    font-family: 'Akaya Telivigala', cursive;
+}
+h1 {
+    text-align: center;
+    color: greenyellow;
+    font-size: 60px;
+}
+
+.cards {
+    display: flex;
+    position: relative;
+    width: 450px;
+    height: 450px;
+    flex-flow: wrap;
+    margin:auto;
+    perspective: 3000px;
+}
+.front, .back {
+    position: absolute;
+    display: flex;
+    border: 1px solid brown;
+    border-radius: 60px;
+    font-size: 25px;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.front {
+    background: coral;
+    backface-visibility: hidden;
+    z-index: 2;
+
+}
+
+.back {
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    background: lawngreen;
+    z-index: 1;
+}
+.sub_card:hover {
+    transform: rotateY(180deg);
+}
+
+.sub_card {
+    display: flex;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+}
